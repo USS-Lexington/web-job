@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- 绘制三角形初探 首次使用context.fill/.stroke -->
 <html lang="zh-cn">
 
 <head>
@@ -8,7 +9,22 @@
 </head>
 
 <body>
-
+    <canvas class="MainCanvas"></canvas>
 </body>
+<script>
+    var canvas = document.getElementById("MainCanvas");
+    canvas.width = 900;
+    canvas.height = 600;
+    canvas.style.border = "1px solid #000000";
+    var context = canvas.getContext("2d");
+    context.beginPath();
+    context.moveto(100, 100);
+    context.lineto(300, 100);
+    context.lineto(300, 500);
+    context.closePath();
+    context.stroke();
+    context.fillStyle = "pink";
+    context.fill();
+</script>
 
 </html>
