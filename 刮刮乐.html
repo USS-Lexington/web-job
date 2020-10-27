@@ -17,7 +17,7 @@
             position: relative;
         }
         
-        .gift {
+        #gift {
             position: absolute;
             top: 0;
             z-index: 1;
@@ -39,12 +39,27 @@
 <body>
     <div class="mainbox">
         <canvas id="maincanvas"></canvas>
-        <div class="gift">谢谢惠顾 </div>
+        <div id="gift">谢谢惠顾</div>
     </div>
     <script>
         canvas = document.getElementById("maincanvas");
-        canvas.width = auto;
+        canvas.width = window.innerWidth;
         canvas.height = 150;
+
+        var context = canvas.getContext("2d");
+        context.fillStyle = "#CCCCCC";
+        context.fillRect(0, 0, window.innerWidth, 150);
+        canvas.addEventListener("touchstart", function(e) {
+            canvas.addEventListener("touchmove", function(e) {
+                context.clearRect(e.touches[0].clientX, e.touches[0].clientY, 30, 30)
+            })
+        })
+
+        var gifts = ["谢谢参与", "100元话费", "豪华跑车一辆", "喜提开除处分"];
+        var i = Math.floor(Math.random() * gifts.length);
+        var gift_id = document.getElementById("gift");
+
+        gift_id.innerHTML = gifts[i];
     </script>
 </body>
 
