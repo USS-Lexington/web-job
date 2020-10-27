@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="maincanvas"></canvas>
+    <script>
+        canvas = document.getElementById("maincanvas");
+        canvas.width = 900;
+        canvas.height = 600;
+        canvas.style.border = "1px solid #000000";
+
+        var context = canvas.getContext("2d");
+
+        context.strokeStyle = "red";
+        context.strokeRect(200, 50, 200, 100);
+        context.fillRect(200, 200, 200, 100);
+    </script>
+</body>
+
+</html>

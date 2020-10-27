@@ -9,22 +9,23 @@
 </head>
 
 <body>
-    <canvas class="MainCanvas"></canvas>
+    <canvas id="MainCanvas"></canvas>
+    <script>
+        var canvas = document.getElementById("MainCanvas");
+        canvas.width = 900;
+        canvas.height = 600;
+        canvas.style.border = "1px solid #000000";
+        var context = canvas.getContext("2d");
+        context.beginPath();
+        context.moveto(100, 100);
+        context.lineto(300, 100);
+        context.lineto(300, 500);
+        context.closePath();
+        context.stroke();
+        context.fillStyle = "pink";
+        context.fill();
+    </script>
 </body>
-<script>
-    var canvas = document.getElementById("MainCanvas");
-    canvas.width = 900;
-    canvas.height = 600;
-    canvas.style.border = "1px solid #000000";
-    var context = canvas.getContext("2d");
-    context.beginPath();
-    context.moveto(100, 100);
-    context.lineto(300, 100);
-    context.lineto(300, 500);
-    context.closePath();
-    context.stroke();
-    context.fillStyle = "pink";
-    context.fill();
-</script>
+
 
 </html>
