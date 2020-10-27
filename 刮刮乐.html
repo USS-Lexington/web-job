@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .mainbox {
+            width: 100%;
+            height: 150px;
+            position: relative;
+        }
+        
+        .gift {
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            color: red;
+            height: 150px;
+            width: 100%;
+            line-height: 150px;
+            text-align: center;
+            font-size: 38px;
+        }
+        
+        #maincanvas {
+            position: absolute;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainbox">
+        <canvas id="maincanvas"></canvas>
+        <div class="gift">谢谢惠顾 </div>
+    </div>
+    <script>
+        canvas = document.getElementById("maincanvas");
+        canvas.width = auto;
+        canvas.height = 150;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="Maincanvas"></canvas>
+
+    <script>
+        var canvas = document.getElementById("Maincanvas");
+
+        canvas.width = 400;
+        canvas.height = 500;
+        canvas.style.border = "1px solid #FF0000";
+
+        var context = canvas.getContext("2d");
+
+        context.strokeStyle = "blue";
+        context.strokeRect(100, 50, 200, 100);
+        context.fillStyle = "pink";
+        context.fillRect(100, 200, 200, 100);
+        context.clearRect(50, 100, 200, 150);
+    </script>
+</body>
+
+</html>
